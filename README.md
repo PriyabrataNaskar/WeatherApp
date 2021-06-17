@@ -29,7 +29,7 @@ Weather App that fetches data from an API. I have used retrofit for Network Call
 
 
 ## Screenshots
-![Weather Image](screenshot/weather.jpeg "height=200")
+![Weather Image]<img src="screenshot/weather.jpeg" height="300"/>
 
 ## Setup
 
