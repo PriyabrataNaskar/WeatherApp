@@ -29,7 +29,7 @@ Weather App that fetches data from an API. I have used retrofit for Network Call
 
 
 ## Screenshots
-![Example screenshot](./img/screenshot.png)
+![Example screenshot](blob/master/screenshot/weather.jpeg)
 
 ## Setup
 
