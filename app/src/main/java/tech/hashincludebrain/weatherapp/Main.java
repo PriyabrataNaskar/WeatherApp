@@ -16,33 +16,60 @@ public class Main {
      * 		"humidity": 52
      *        },
      */
+
     @SerializedName("temp")
     private double temp;
+
     @SerializedName("temp_min")
     private double tempMin;
+
     @SerializedName("temp_max")
     private double tempMax;
 
+    /**
+     *
+     * @return temp
+     */
     public double getTemp() {
         return temp;
     }
 
+    /**
+     *
+     * @param temp
+     */
     public void setTemp(double temp) {
         this.temp = temp;
     }
 
+    /**
+     *
+     * @return tempMin
+     */
     public double getTempMin() {
         return tempMin;
     }
 
+    /**
+     *
+     * @param tempMin
+     */
     public void setTempMin(double tempMin) {
         this.tempMin = tempMin;
     }
 
+    /**
+     *
+     * @return tempMax
+     */
     public double getTempMax() {
         return tempMax;
     }
 
+    /**
+     *
+     * @param tempMax
+     */
     public void setTempMax(double tempMax) {
         this.tempMax = tempMax;
     }

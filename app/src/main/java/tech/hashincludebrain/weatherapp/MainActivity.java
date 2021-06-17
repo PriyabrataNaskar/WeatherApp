@@ -50,28 +50,32 @@ public class MainActivity extends AppCompatActivity {
                 .build();
 
         PlaceHolderInterface service = retrofit.create(PlaceHolderInterface.class);
+
+
         Call<ResponseModel> call = service.getWeather("35", "139");
         call.enqueue(new Callback<ResponseModel>() {
             @Override
             public void onResponse(Call<ResponseModel> call, Response<ResponseModel> response) {
                 if (!response.isSuccessful()) {
+                    //for unsuccessful response
                     Toast.makeText(getApplicationContext(), " " + response.code(), Toast.LENGTH_SHORT).show();
                     return;
                 }
-                Toast.makeText(getApplicationContext(), "Successful ", Toast.LENGTH_SHORT).show();
+
                 assert response.body() != null;
-                response.body().getCoord();
+
+                //Weather object from the API Response
                 Weather weather = response.body().getWeathers().get(0);
                 weatherName.setText(weather.getWeatherName());
 
                 Glide.with(getApplicationContext()).load(weather.getWeatherIconResource()).centerCrop().into(weatherImage);
 
                 Main main = response.body().getMain();
-                tempTextView.setText("Temp: " + String.valueOf(main.getTemp()));
-                maxTempTextView.setText("Max Temp: " + String.valueOf(main.getTempMax()));
-                minTempTextView.setText("Min Temp: " + String.valueOf(main.getTempMin()));
+                tempTextView.setText("Temp: " + main.getTemp());
+                maxTempTextView.setText("Max Temp: " + main.getTempMax());
+                minTempTextView.setText("Min Temp: " + main.getTempMin());
                 Wind wind = response.body().getWind();
-                windSpeedTextView.setText("Wind Speed: " + String.valueOf(wind.getSpeed()));
+                windSpeedTextView.setText("Wind Speed: " + wind.getSpeed());
 
                 Coord coord = response.body().getCoord();
                 latTextView.setText("Latitude: " + coord.getLatitude());

@@ -10,10 +10,13 @@ import java.util.List;
 public class ResponseModel {
     @SerializedName("coord")
     private Coord coord;
+
     @SerializedName("weather")
     private List<Weather> weathers;
+
     @SerializedName("main")
     private Main main;
+
     @SerializedName("wind")
     private Wind wind;
 

@@ -8,7 +8,6 @@ import retrofit2.http.Query;
  * Created by Priyabrata Naskar on 17-05-2021.
  */
 
-
 public interface PlaceHolderInterface {
 
     @GET("api/current")

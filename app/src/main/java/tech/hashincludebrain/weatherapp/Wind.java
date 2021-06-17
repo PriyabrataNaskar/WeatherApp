@@ -7,7 +7,7 @@ import com.google.gson.annotations.SerializedName;
  */
 public class Wind {
 
-    /**"speed": 4.02,
+    /**     "speed": 4.02,
             "deg": 235,
             "gust": 5.81
      **/
